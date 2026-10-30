@@ -1,0 +1,4 @@
+# Keep source bytes consistent across Windows, Linux and macOS checkouts.
+* text=auto eol=lf
+*.exe binary
+*.zip binary

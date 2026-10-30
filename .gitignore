@@ -1,0 +1,19 @@
+# Executables and archives belong in GitHub Release assets, not Git history.
+/dist/
+*.exe
+*.zip
+/wam-linux-amd64
+/wam-darwin-amd64
+/wam-darwin-arm64
+/SHA256SUMS
+/BUILDINFO.json
+
+# WAM implementation and developer fixtures stay in the private repository.
+*.go
+/cmd/
+/internal/
+/scripts/
+/testdata/
+/tools/
+/go.mod
+/go.sum

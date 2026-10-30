@@ -1,0 +1,53 @@
+name: Diagnostic problem
+description: Report a missing, misleading, or unsupported WAM check.
+title: '[Diagnostic] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide a small reproduction. Remove secrets, private source, usernames, and local paths before posting. Do not attach .env files or environment dumps. WAM reports omit environment values, but project names and paths can still be private.
+  - type: input
+    id: version
+    attributes:
+      label: WAM version
+      description: Copy the output of wam version.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Operating system and architecture
+      placeholder: Windows x64, Linux x64, macOS Intel, or macOS Apple Silicon
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and scan selection
+      description: Include relevant options and exclusions; replace private directory names.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal manifest reproduction
+      description: Include only the supported declarations needed to reproduce the problem. Use dummy variable names and values; no secrets or private repository archive.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual diagnostic
+      description: Paste the relevant redacted diagnostic and any error. Check source paths and project names before sharing.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior and evidence
+      description: Explain what the repository requires and why the observed result appears wrong. A version declaration or official resolver result is useful.
+    validations:
+      required: true
